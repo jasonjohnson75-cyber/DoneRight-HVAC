@@ -97,11 +97,11 @@
   </section>
 
   <section id="financing" style="margin-top:22px; background:#eff6fd; border-top:1px solid #dbe8f5; border-bottom:1px solid #dbe8f5;">
-    <div style="max-width:1240px; margin:0 auto; padding:26px 28px; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:26px;">
+    <div style="max-width:1320px; margin:0 auto; padding:34px 34px; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:34px;">
       <sc-for list="{{ assurances }}" as="a" hint-placeholder-count="4">
-        <div style="display:flex; gap:14px; align-items:flex-start;">
-          <span style="width:38px; height:38px; flex:none; background-image:{{ a.icon }}; background-size:contain; background-position:center; background-repeat:no-repeat; display:block;"></span>
-          <p style="margin:0; font-size:13.5px; line-height:1.5; color:#39536f;"><strong style="color:#0f2b4c;">{{ a.lead }}</strong> {{ a.rest }}</p>
+        <div style="display:flex; gap:18px; align-items:center; min-height:64px;">
+          <span style="width:50px; height:50px; flex:none; background-image:{{ a.icon }}; background-size:contain; background-position:center; background-repeat:no-repeat; display:block;"></span>
+          <p style="margin:0; font-size:15px; line-height:1.5; color:#39536f;"><strong style="color:#0f2b4c; font-size:15.5px;">{{ a.lead }}</strong> {{ a.rest }}</p>
         </div>
       </sc-for>
     </div>
