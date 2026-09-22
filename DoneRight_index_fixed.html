@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Caveat:wght@600;700&display=swap" rel="stylesheet" />
+<style>
+  body { margin:0; background:#ffffff; font-family:'Archivo', Helvetica, Arial, sans-serif; color:#14263c; -webkit-font-smoothing:antialiased; }
+  a { color:#1276d6; text-decoration:none; }
+  a:hover { color:#f26522; }
+</style>
+</helmet>
+<div style="width:100%; background:#ffffff;">
+
+  <header style="display:flex; align-items:center; justify-content:space-between; gap:18px; padding:14px 28px; max-width:1240px; margin:0 auto;">
+    <div style="display:flex; align-items:center; gap:14px;">
+      <div style="width:132px; height:76px; flex:none; background-image:url('logo.png'); background-size:contain; background-position:center; background-repeat:no-repeat;"></div>
+    </div>
+    <nav style="flex:1 1 auto; min-width:0; display:flex; align-items:center; justify-content:center; gap:12px; font-size:12.5px; font-weight:500; color:#3c5570; white-space:nowrap;">
+      <a href="#home" style="color:#1276d6; font-weight:700; padding-bottom:4px; border-bottom:2px solid #1276d6;">Home</a>
+      <a href="#services" style="color:#3c5570;">Services</a>
+      <a href="#about" style="color:#3c5570;">About</a>
+      <a href="#areas" style="color:#3c5570;">Service Areas</a>
+      <a href="#financing" style="color:#3c5570;">Financing</a>
+      <a href="#reviews" style="color:#3c5570;">Reviews</a>
+      <a href="#contact" style="color:#3c5570;">Contact</a>
+    </nav>
+    <div style="flex:none; display:flex; flex-direction:column; align-items:center; gap:6px;">
+      <a href="{{ telHref }}" style="display:flex; align-items:center; gap:14px; background:#0d3f86; border-radius:8px; padding:8px 22px 8px 8px; color:#ffffff;" style-hover="background:#0a3269">
+        <span style="width:34px; height:34px; border-radius:6px; background:#ffffff; display:flex; align-items:center; justify-content:center;">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 2h3l1.2 3-1.8 1.2a9 9 0 004.4 4.4L11 8.8 14 10v3a1 1 0 01-1.1 1A12 12 0 012 3.1 1 1 0 013 2z" fill="#0d3f86"></path></svg>
+        </span>
+        <span style="font-size:18px; font-weight:800; letter-spacing:-0.01em; color:#ffffff; white-space:nowrap;">{{ phone }}</span>
+      </a>
+      <div style="font-size:11px; font-weight:700; letter-spacing:0.06em; color:#1f3a58;">CALL TODAY • WE'RE HERE TO HELP</div>
+    </div>
+  </header>
+
+  <section id="home" style="position:relative; background:#071f3d; color:#ffffff; overflow:hidden;">
+    <div style="position:absolute; inset:0; background:repeating-linear-gradient(135deg,#0d2f57 0 14px,#0a2748 14px 28px);"></div>
+    <div style="position:absolute; right:0; top:0; bottom:0; width:58%; background-image:url('hero-van.png'); background-size:contain; background-position:right center; background-repeat:no-repeat;"></div>
+    <div style="position:absolute; right:0; top:0; bottom:0; width:100%; left:0; background:linear-gradient(90deg,rgba(7,31,61,0.9) 0%,rgba(7,31,61,0.75) 38%,rgba(7,31,61,0.12) 56%,rgba(7,31,61,0) 70%);"></div>
+    <div style="position:relative; max-width:1240px; margin:0 auto; padding:48px 28px 34px;">
+      <div style="max-width:640px;">
+        <h1 style="margin:0; font-size:46px; line-height:1.04; font-weight:800; letter-spacing:-0.02em;">Reliable Comfort<br /><span style="font-size:0.9em;">When You <span style="color:#3ea0ff;">Need It Most</span></span></h1>
+        <div style="margin-top:14px; font-size:22px; font-weight:700; letter-spacing:0.01em;">Heating&nbsp; |&nbsp; Cooling&nbsp; |&nbsp; Done Right</div>
+        <p style="margin:20px 0 0; font-size:16px; line-height:1.6; color:#d7e6f7; max-width:470px;">Done Right Heating &amp; Air Conditioning LLC provides honest, dependable HVAC service for homes and businesses across the greater Jackson metro area, including Ridgeland and Madison.<br /><strong style="font-weight:800; text-transform:uppercase;">We humbly serve customers one house at a time proudly!</strong></p>
+        <div style="margin:22px 0 0; font-family:'Caveat',cursive; line-height:0.95;">
+          <div style="font-size:42px; font-weight:700; color:#ffffff;">Don't get done wrong</div>
+          <div style="height:6px; width:300px; margin:4px 0 2px; background:linear-gradient(90deg,#f26522,#f79a4b); border-radius:4px; transform:skewY(-2deg);"></div>
+          <div style="font-size:50px; font-weight:700; color:#3ea0ff; padding-left:40px;">Get Done Right</div>
+        </div>
+        <div style="margin-top:26px; display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="{{ telHref }}" style="display:flex; align-items:center; gap:14px; background:#f26522; padding:14px 26px; border-radius:8px; color:#ffffff;" style-hover="background:#d95415">
+            <span style="width:38px; height:38px; border-radius:50%; background:#ffffff; display:flex; align-items:center; justify-content:center;">
+              <svg width="17" height="17" viewBox="0 0 16 16"><path d="M3 2h3l1.2 3-1.8 1.2a9 9 0 004.4 4.4L11 8.8 14 10v3a1 1 0 01-1.1 1A12 12 0 012 3.1 1 1 0 013 2z" fill="#f26522"></path></svg>
+            </span>
+            <span style="font-size:19px; font-weight:700; line-height:1.15; color:#ffffff;">Call Now<br /><span style="font-size:17px; font-weight:600;">{{ phone }}</span></span>
+          </a>
+          <a href="#contact" style="display:flex; align-items:center; gap:14px; border:2px solid #ffffff; padding:16px 22px; border-radius:8px; color:#ffffff;" style-hover="background:rgba(255,255,255,0.12)">
+            <span style="width:26px; height:26px; flex:none; background-image:url('icon-calendar.png'); background-size:contain; background-position:center; background-repeat:no-repeat; display:block;"></span>
+            <span style="font-size:17px; font-weight:700;">Request Service</span>
+            <svg width="16" height="16" viewBox="0 0 16 16"><polyline points="5,3 10,8 5,13" fill="none" stroke="#ffffff" stroke-width="2.2"></polyline></svg>
+          </a>
+        </div>
+        <div style="margin-top:30px; display:flex; gap:38px; flex-wrap:wrap;">
+          <sc-for list="{{ trustItems }}" as="t" hint-placeholder-count="3">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span style="width:30px; height:30px; flex:none; background-image:{{ t.icon }}; background-size:contain; background-position:center; background-repeat:no-repeat; display:block;"></span>
+              <span style="font-size:13px; font-weight:600; line-height:1.35; color:#eaf3fc;">{{ t.a }}<br />{{ t.b }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" style="max-width:1240px; margin:0 auto; padding:18px 28px 6px; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px;">
+    <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
+      <a href="#contact" style="position:relative; display:block; min-height:236px; border-radius:10px; overflow:hidden; background:#0b2b52; color:#ffffff; box-shadow:0 6px 18px rgba(10,35,66,0.22); transition:transform 0.18s ease, box-shadow 0.18s ease;" style-hover="transform:translateY(-3px); box-shadow:0 12px 26px rgba(10,35,66,0.3)">
+        <span style="position:absolute; top:0; left:0; right:0; height:130px; background-image:{{ s.photo }}; background-size:cover; background-position:center; display:block;"></span>
+        <span style="position:absolute; inset:0; background:linear-gradient(180deg,rgba(7,28,54,0.12) 0%,rgba(7,28,54,0.55) 40%,#0a2a52 62%,#0a2a52 100%);"></span>
+        <span style="position:relative; display:flex; flex-direction:column; justify-content:flex-end; align-items:center; height:100%; min-height:236px; padding:20px 20px 60px; box-sizing:border-box; text-align:center;">
+          <span style="display:block; font-size:21px; font-weight:800; letter-spacing:0.005em; line-height:1.2; text-transform:uppercase;">{{ s.title }}</span>
+          <span style="display:block; margin-top:10px; max-width:180px; font-size:13.5px; line-height:1.45; color:#d6e5f5;">{{ s.sub }}</span>
+        </span>
+        <span style="position:absolute; right:16px; bottom:16px; width:30px; height:30px; border-radius:50%; background:#ffffff; display:flex; align-items:center; justify-content:center;">
+          <svg width="14" height="14" viewBox="0 0 16 16"><polyline points="6,3 11,8 6,13" fill="none" stroke="#0d3f86" stroke-width="2.6"></polyline></svg>
+        </span>
+      </a>
+    </sc-for>
+  </section>
+
+  <section id="financing" style="margin-top:22px; background:#eff6fd; border-top:1px solid #dbe8f5; border-bottom:1px solid #dbe8f5;">
+    <div style="max-width:1240px; margin:0 auto; padding:26px 28px; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:26px;">
+      <sc-for list="{{ assurances }}" as="a" hint-placeholder-count="4">
+        <div style="display:flex; gap:14px; align-items:flex-start;">
+          <span style="width:38px; height:38px; flex:none; background-image:{{ a.icon }}; background-size:contain; background-position:center; background-repeat:no-repeat; display:block;"></span>
+          <p style="margin:0; font-size:13.5px; line-height:1.5; color:#39536f;"><strong style="color:#0f2b4c;">{{ a.lead }}</strong> {{ a.rest }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="about" style="max-width:1240px; margin:0 auto; padding:40px 28px; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,0.85fr) minmax(0,0.9fr); gap:26px; align-items:start;">
+    <div>
+      <h2 style="margin:0; font-size:34px; font-weight:800; line-height:1.1; letter-spacing:-0.01em; color:#0d3f86;">ABOUT DONE RIGHT<br /><span style="color:#3ea0ff;">HEATING &amp;</span> <span style="color:#f26522;">AIR</span></h2>
+      <p style="margin:18px 0 0; font-size:15px; line-height:1.65; color:#39536f;">Done Right Heating &amp; Air Conditioning LLC is a residential and commercial HVAC contractor serving the greater Jackson metro area, including the Ridgeland and Madison region. Established around 2014 (with formal LLC incorporation in 2021) by principal manager <strong style="color:#0f2b4c;">Leshon Williams</strong>, we are committed to providing honest troubleshooting, dependable climate control solutions, and excellent service.</p>
+      <a href="#contact" style="margin-top:24px; display:inline-flex; align-items:center; gap:12px; background:#0d3f86; color:#ffffff; padding:14px 22px; border-radius:6px; font-size:15px; font-weight:700;" style-hover="background:#0a3269">Learn More About Us
+        <span style="width:24px; height:24px; border-radius:50%; background:#1276d6; display:flex; align-items:center; justify-content:center;">
+          <svg width="12" height="12" viewBox="0 0 16 16"><polyline points="6,3 11,8 6,13" fill="none" stroke="#ffffff" stroke-width="2.4"></polyline></svg>
+        </span>
+      </a>
+    </div>
+    <div style="background:linear-gradient(160deg,#124a92,#08203f); border-radius:6px; padding:22px; display:flex; flex-direction:column; gap:20px;">
+      <sc-for list="{{ promises }}" as="p" hint-placeholder-count="4">
+        <div style="display:flex; gap:14px; align-items:flex-start;">
+          <span style="width:38px; height:38px; flex:none; background-image:{{ p.icon }}; background-size:contain; background-position:center; background-repeat:no-repeat; display:block;"></span>
+          <span style="display:block;">
+            <span style="display:block; font-size:14.5px; font-weight:700; color:#ffffff;">{{ p.title }}</span>
+            <span style="display:block; margin-top:3px; font-size:13px; line-height:1.45; color:#c9dcf1;">{{ p.sub }}</span>
+          </span>
+        </div>
+      </sc-for>
+    </div>
+    <div style="position:relative; aspect-ratio:318 / 276; border-radius:6px; overflow:hidden; background-image:url('about-condenser.png'); background-size:100% 100%;"></div>
+  </section>
+
+  <section style="position:relative; background:#0a1f34; color:#ffffff; overflow:hidden;">
+    <div style="position:absolute; inset:0; background-image:url('comfort-room.png'); background-size:auto 100%; background-position:center; background-repeat:repeat-x; background-color:#0a1f34;"></div>
+    <div style="position:absolute; inset:0; background:linear-gradient(90deg,rgba(6,20,36,0.46) 0%,rgba(6,20,36,0.3) 50%,rgba(6,20,36,0.46) 100%);"></div>
+    <div style="position:relative; max-width:1240px; margin:0 auto; padding:36px 28px; display:grid; grid-template-columns:minmax(0,1fr) auto; gap:26px; align-items:center;">
+      <div>
+        <h2 style="margin:0; font-size:34px; font-weight:800; line-height:1.12; letter-spacing:-0.01em;">YOUR COMFORT<br />IS OUR PRIORITY</h2>
+        <p style="margin:14px 0 0; font-size:16px; line-height:1.55; color:#d5e5f5;">From emergency repairs to new installations,<br />we're here to keep you comfortable year-round.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:14px; min-width:290px;">
+        <a href="{{ telHref }}" style="display:flex; align-items:center; gap:14px; background:#f26522; padding:14px 24px; border-radius:8px; color:#ffffff;" style-hover="background:#d95415">
+          <span style="width:36px; height:36px; border-radius:50%; background:#ffffff; display:flex; align-items:center; justify-content:center;">
+            <svg width="16" height="16" viewBox="0 0 16 16"><path d="M3 2h3l1.2 3-1.8 1.2a9 9 0 004.4 4.4L11 8.8 14 10v3a1 1 0 01-1.1 1A12 12 0 012 3.1 1 1 0 013 2z" fill="#f26522"></path></svg>
+          </span>
+          <span style="font-size:19px; font-weight:700; line-height:1.15;">Call Now<br /><span style="font-size:17px; font-weight:600;">{{ phone }}</span></span>
+        </a>
+        <a href="#contact" style="display:flex; align-items:center; gap:14px; border:2px solid #ffffff; padding:15px 24px; border-radius:8px; color:#ffffff;" style-hover="background:rgba(255,255,255,0.12)">
+          <span style="width:26px; height:26px; flex:none; background-image:url('icon-calendar.png'); background-size:contain; background-position:center; background-repeat:no-repeat; display:block;"></span>
+          <span style="font-size:17px; font-weight:700;">Request Service</span>
+          <svg width="16" height="16" viewBox="0 0 16 16"><polyline points="5,3 10,8 5,13" fill="none" stroke="#ffffff" stroke-width="2.2"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="areas" style="background:#eff6fd; border-bottom:1px solid #dbe8f5;">
+    <div style="max-width:1240px; margin:0 auto; padding:20px 28px; display:flex; align-items:center; justify-content:center; gap:44px; flex-wrap:wrap;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <span style="width:22px; height:22px; border-radius:50% 50% 50% 0; background:#0d3f86; transform:rotate(-45deg); display:block;"></span>
+        <span style="font-size:17px; font-weight:800; letter-spacing:0.02em; color:#0d3f86;">PROUDLY SERVING</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:22px; font-size:15px; color:#39536f;">
+        <span>Jackson</span><span style="color:#a9c2da;">|</span>
+        <span>Ridgeland</span><span style="color:#a9c2da;">|</span>
+        <span>Madison</span><span style="color:#a9c2da;">|</span>
+        <span>And Surrounding Areas</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" style="background:#ffffff; border-bottom:1px solid #e3ecf6;">
+   <div style="max-width:1240px; margin:0 auto; padding:24px 28px 30px; display:grid; grid-template-columns:minmax(0,1fr) minmax(320px,0.62fr); gap:32px; align-items:center;">
+    <div style="display:grid; grid-template-columns:minmax(0,0.75fr) minmax(0,1.25fr); gap:22px; align-items:start; zoom:0.83;">
+      <div>
+        <h2 style="margin:0; font-size:30px; font-weight:800; line-height:1.15; letter-spacing:-0.01em; color:#0d3f86;">RATED 5.0 BY OUR<br /><span style="color:#3ea0ff;">NEIGHBORS</span></h2>
+        <div style="margin-top:18px; display:flex; align-items:baseline; gap:12px;">
+          <span style="font-size:52px; font-weight:800; line-height:1; color:#0f2b4c;">5.0</span>
+          <span style="font-size:26px; letter-spacing:2px; color:#f5a623;">★★★★★</span>
+        </div>
+        <p style="margin:10px 0 0; font-size:14px; color:#6b8299;"><a href="https://share.google/sfnm8xKlKnQ9GZD05" target="_blank" rel="noopener" style="color:#1276d6; font-weight:600;">503 reviews on Google</a></p>
+        <p style="margin:16px 0 0; font-size:14px; line-height:1.55; color:#39536f;">665 S Pear Orchard Rd Ste 106 - 853,<br />Ridgeland, MS 39157, United States</p>
+        <a href="https://share.google/sfnm8xKlKnQ9GZD05" target="_blank" rel="noopener" style="margin-top:22px; display:inline-flex; align-items:center; gap:10px; border:2px solid #0d3f86; color:#0d3f86; padding:12px 22px; border-radius:8px; font-size:14px; font-weight:700;" style-hover="background:#0d3f86; color:#ffffff">Write a review
+          <svg width="14" height="14" viewBox="0 0 16 16"><polyline points="6,3 11,8 6,13" fill="none" stroke="currentColor" stroke-width="2.4"></polyline></svg>
+        </a>
+      </div>
+      <div style="background:#f5f9fd; border:1px solid #e0eaf5; border-radius:10px; padding:26px 28px;">
+        <div style="display:flex; align-items:center; gap:14px;">
+          <span style="width:42px; height:42px; border-radius:50%; background:#5c7793; color:#ffffff; display:flex; align-items:center; justify-content:center; font-size:18px; font-weight:700;">j</span>
+          <span style="display:block;">
+            <span style="display:block; font-size:15px; font-weight:700; color:#0f2b4c;">jamie dollar</span>
+            <span style="display:block; font-size:12.5px; color:#6b8299;">4 reviews</span>
+          </span>
+        </div>
+        <div style="margin-top:14px; display:flex; align-items:center; gap:12px;">
+          <span style="font-size:15px; letter-spacing:1px; color:#f5a623;">★★★★★</span>
+          <span style="font-size:12.5px; color:#6b8299;">3 days ago</span>
+        </div>
+        <p style="margin:14px 0 0; font-size:15px; font-weight:700; color:#0f2b4c;">Great price</p>
+        <p style="margin:8px 0 0; font-size:15px; line-height:1.65; color:#39536f;">Done right did it right!! I really cannot thank this young man &amp; his awesome crew enough!! Not only was he the best price around, he had our complete A/C delivered &amp; installed in a little over 24 hours. He &amp; his crew were all awesome &amp; extremely respectful. HIGHLY RECOMMEND!!</p>
+        <div style="margin-top:20px; padding-left:18px; border-left:3px solid #cfe1f3;">
+          <p style="margin:0; font-size:13.5px; font-weight:700; color:#0f2b4c;">Done Right Heating &amp;AC (Owner)</p>
+          <p style="margin:4px 0 0; font-size:12.5px; color:#6b8299;">3 days ago</p>
+          <p style="margin:8px 0 0; font-size:14.5px; color:#39536f;">Thanks so much</p>
+        </div>
+      </div>
+    </div>
+    <div style="width:100%; aspect-ratio:16 / 9; border-radius:10px; border:1px dashed #9fb4cd; background:repeating-linear-gradient(135deg,#f3f7fb 0 10px,#e8eff7 10px 20px); display:flex; align-items:center; justify-content:center; text-align:center; padding:20px; box-sizing:border-box; font:500 12px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace; color:#5c7793;">video goes here<br />re-upload the .mp4</div>
+   </div>
+  </section>
+
+  <footer id="contact" style="max-width:1240px; margin:0 auto; padding:26px 28px 34px; display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:26px; align-items:center; overflow:hidden;">
+    <div style="width:168px; height:95px; background-image:url('logo.png'); background-size:contain; background-position:center; background-repeat:no-repeat;"></div>
+    <div style="text-align:center;">
+      <nav style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px 14px; font-size:12.5px; font-weight:500;">
+        <a href="#home" style="color:#3c5570;">Home</a>
+        <a href="#services" style="color:#3c5570;">Services</a>
+        <a href="#about" style="color:#3c5570;">About</a>
+        <a href="#areas" style="color:#3c5570;">Service Areas</a>
+        <a href="#financing" style="color:#3c5570;">Financing</a>
+        <a href="#reviews" style="color:#3c5570;">Reviews</a>
+        <a href="#contact" style="color:#3c5570;">Contact</a>
+      </nav>
+      <p style="margin:18px 0 0; font-size:12.5px; color:#6b8299;">© 2024 Done Right Heating &amp; Air Conditioning LLC.&nbsp;&nbsp; All rights reserved.</p>
+    </div>
+    <div style="display:flex; align-items:center; gap:18px;">
+      <div style="font-family:'Caveat',cursive; line-height:0.95; text-align:center; flex:none;">
+        <div style="font-size:21px; font-weight:700; color:#0f2b4c; white-space:nowrap;">Don't get done wrong</div>
+        <div style="height:4px; width:130px; margin:4px auto 2px; background:#f26522; border-radius:3px; transform:skewY(-2deg);"></div>
+        <div style="font-size:26px; font-weight:700; color:#1276d6; white-space:nowrap;">Get Done Right</div>
+      </div>
+      <a href="#contact" style="display:flex; align-items:center; gap:10px; color:#0f2b4c;" style-hover="color:#1276d6">
+        <span style="width:32px; height:32px; flex:none; border-radius:50%; background:#0f2b4c; display:flex; align-items:center; justify-content:center; color:#ffffff; font-weight:800; font-size:16px; font-family:Georgia,serif;">f</span>
+        <span style="font-size:13px; font-weight:700; line-height:1.25; white-space:nowrap;">Follow us on<br />Facebook</span>
+      </a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;phone&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;(601) 895-0222&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  icon(kind) {
+    const h = React.createElement;
+    const S = (p) => h("svg", Object.assign({ width: 64, height: 64, viewBox: "0 0 64 64", fill: "none" }, p));
+    if (kind === "snowflake") {
+      const arms = [0, 60, 120].map((a) =>
+        h("line", { key: a, x1: 32, y1: 6, x2: 32, y2: 58, stroke: "#ffffff", strokeWidth: 4, strokeLinecap: "round", transform: "rotate(" + a + " 32 32)" })
+      );
+      const ticks = [0, 60, 120, 180, 240, 300].map((a) =>
+        h("g", { key: "t" + a, transform: "rotate(" + a + " 32 32)" }, [
+          h("line", { key: "l", x1: 32, y1: 12, x2: 24, y2: 20, stroke: "#ffffff", strokeWidth: 3.5, strokeLinecap: "round" }),
+          h("line", { key: "r", x1: 32, y1: 12, x2: 40, y2: 20, stroke: "#ffffff", strokeWidth: 3.5, strokeLinecap: "round" })
+        ])
+      );
+      return S({ children: arms.concat(ticks) });
+    }
+    if (kind === "flame") {
+      return S({
+        children: [
+          h("path", { key: "o", d: "M32 4c8 10 18 16 18 30a18 18 0 11-36 0C14 20 24 14 32 4z", fill: "#f26522" }),
+          h("path", { key: "i", d: "M32 26c4 6 9 9 9 16a9 9 0 11-18 0c0-7 5-10 9-16z", fill: "#ffd08a" })
+        ]
+      });
+    }
+    if (kind === "condenser") {
+      const bars = [22, 28, 34, 40].map((y) =>
+        h("line", { key: y, x1: 16, y1: y, x2: 48, y2: y, stroke: "#cfe1f3", strokeWidth: 3, strokeLinecap: "round" })
+      );
+      return S({
+        children: [
+          h("rect", { key: "b", x: 12, y: 12, width: 40, height: 40, rx: 4, stroke: "#ffffff", strokeWidth: 3.5 }),
+          h("circle", { key: "c", cx: 32, cy: 32, r: 9, stroke: "#ffffff", strokeWidth: 3.5 })
+        ].concat(bars)
+      });
+    }
+    return S({
+      children: [
+        h("rect", { key: "r1", x: 6, y: 22, width: 22, height: 20, rx: 3, stroke: "#ffffff", strokeWidth: 3.5 }),
+        h("rect", { key: "r2", x: 34, y: 16, width: 24, height: 26, rx: 3, stroke: "#ffffff", strokeWidth: 3.5 }),
+        h("circle", { key: "c1", cx: 17, cy: 32, r: 5, stroke: "#cfe1f3", strokeWidth: 3 }),
+        h("circle", { key: "c2", cx: 46, cy: 29, r: 6, stroke: "#cfe1f3", strokeWidth: 3 }),
+        h("line", { key: "g", x1: 2, y1: 48, x2: 62, y2: 48, stroke: "#cfe1f3", strokeWidth: 3.5, strokeLinecap: "round" })
+      ]
+    });
+  }
+  renderVals() {
+    const phone = this.props.phone ?? "(601) 895-0222";
+    return {
+      phone,
+      telHref: "tel:" + phone.replace(/[^0-9]/g, ""),
+      trustItems: [
+        { a: "Licensed & Insured", b: "MS License #20072", icon: "url('trust-shield.png')" },
+        { a: "Residential &", b: "Commercial", icon: "url('trust-people.png')" },
+        { a: "Emergency", b: "Service Available", icon: "url('trust-clock.png')" }
+      ],
+      services: [
+        { title: "A/C Repair & Service", sub: "Stay cool when it matters most.", photo: "url('card-ac-repair.png')" },
+        { title: "Heating Services", sub: "Keep your home warm and safe.", photo: "url('card-heating.png')" },
+        { title: "Installation & Replacement", sub: "Energy-efficient solutions.", photo: "url('card-installation.png')" },
+        { title: "Commercial HVAC", sub: "Dependable systems for your business.", photo: "url('card-commercial.png')" }
+      ],
+      assurances: [
+        { lead: "Emergency Capability", rest: "We help with urgent HVAC failures, often within hours.", icon: "url('strip-bolt.png')" },
+        { lead: "Flexible Financing Options", rest: "available for new and used equipment.", icon: "url('strip-financing.png')" },
+        { lead: "Major Credit Cards Accepted", rest: "Convenient and secure.", icon: "url('strip-cards.png')" },
+        { lead: "Local & Trusted", rest: "Proudly serving Jackson, Ridgeland, Madison and the surrounding area.", icon: "url('strip-local.png')" }
+      ],
+      promises: [
+        { title: "Honest Diagnostics", sub: "Not unnecessary upsells.", icon: "url('icon-people.png')" },
+        { title: "Professional Work Ethic", sub: "We get the job done right.", icon: "url('icon-gear.png')" },
+        { title: "Licensed Contractor", sub: "MS License #20072", icon: "url('icon-shield.png')" },
+        { title: "Residential & Commercial", sub: "We service homes and businesses.", icon: "url('icon-house.png')" }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
