@@ -99,6 +99,10 @@
     #financing > div { grid-template-columns:1fr !important; padding:24px 18px !important; gap:18px !important; }
     #financing > div > div { min-height:0 !important; }
 
+
+    section[aria-label="FTL Finance financing option"] { padding:0 14px !important; margin-top:14px !important; }
+    section[aria-label="FTL Finance financing option"] > div { padding:24px 18px !important; gap:18px !important; }
+    section[aria-label="FTL Finance financing option"] a { width:100% !important; min-width:0 !important; }
     section[aria-label="No credit check lease purchase option"] { margin-top:14px !important; padding:0 14px !important; }
     section[aria-label="No credit check lease purchase option"] > div > div:nth-child(3) { grid-template-columns:1fr !important; padding:24px 18px 92px !important; gap:12px !important; text-align:center; }
     section[aria-label="No credit check lease purchase option"] > div > div:nth-child(3) > div:first-child > div { max-width:150px !important; }
@@ -231,6 +235,19 @@
           <p style="margin:0; font-size:15px; line-height:1.5; color:#39536f;"><strong style="color:#0f2b4c; font-size:15.5px;">{{ a.lead }}</strong> {{ a.rest }}</p>
         </div>
       </sc-for>
+    </div>
+  </section>
+
+  <section aria-label="FTL Finance financing option" style="max-width:1240px; margin:22px auto 0; padding:0 28px;">
+    <div style="position:relative; overflow:hidden; border-radius:12px; background:linear-gradient(135deg,#0d3f86 0%,#1276d6 100%); box-shadow:0 10px 28px rgba(7,31,61,0.18); padding:30px 34px; display:flex; align-items:center; justify-content:space-between; gap:28px; flex-wrap:wrap;">
+      <div style="max-width:720px;">
+        <div style="font-size:13px; font-weight:800; letter-spacing:0.12em; color:#9fd0ff;">ADDITIONAL FINANCING OPTION</div>
+        <h2 style="margin:8px 0 0; font-size:clamp(27px,3.5vw,40px); line-height:1.05; font-weight:900; color:#ffffff;">Financing Through FTL Finance</h2>
+        <p style="margin:12px 0 0; font-size:16px; line-height:1.55; color:#e3f0fc;">Explore available financing for your heating and air conditioning project and apply online.</p>
+      </div>
+      <a href="https://beta.apptracker.ftlfinance.com/new/C217619" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; min-width:220px; background:#f26522; color:#ffffff; padding:15px 26px; border-radius:999px; font-size:18px; font-weight:900; box-shadow:0 7px 18px rgba(0,0,0,0.18);" style-hover="background:#d95415; transform:translateY(-2px);">APPLY FOR FINANCING
+        <svg width="18" height="18" viewBox="0 0 16 16"><polyline points="5,3 10,8 5,13" fill="none" stroke="#ffffff" stroke-width="2.4"></polyline></svg>
+      </a>
     </div>
   </section>
 
