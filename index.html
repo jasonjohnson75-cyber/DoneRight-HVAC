@@ -15,6 +15,133 @@
   body { margin:0; background:#ffffff; font-family:'Archivo', Helvetica, Arial, sans-serif; color:#14263c; -webkit-font-smoothing:antialiased; }
   a { color:#1276d6; text-decoration:none; }
   a:hover { color:#f26522; }
+
+  /* Mobile optimization */
+  html { scroll-behavior:smooth; }
+  * { box-sizing:border-box; }
+  img, video, svg { max-width:100%; }
+  a { -webkit-tap-highlight-color:transparent; }
+
+  @media (max-width: 900px) {
+    body { overflow-x:hidden; }
+    header { padding:10px 16px !important; gap:10px !important; flex-wrap:wrap; }
+    header > div:first-child { flex:1 1 auto !important; }
+    header > div:first-child > div { width:142px !important; height:72px !important; background-position:left center !important; }
+    header > nav { order:3 !important; flex:1 0 100% !important; justify-content:flex-start !important; overflow-x:auto !important; gap:18px !important; padding:8px 2px 4px !important; scrollbar-width:none; }
+    header > nav::-webkit-scrollbar { display:none; }
+    header > nav a { min-height:36px; display:inline-flex; align-items:center; font-size:13px; }
+    header > div:last-child { align-items:flex-end !important; }
+    header > div:last-child > a { padding:7px 12px 7px 7px !important; gap:8px !important; }
+    header > div:last-child > a span:last-child { font-size:15px !important; }
+    header > div:last-child > div { display:none !important; }
+
+    #home { min-height:0 !important; background-position:62% center !important; }
+    #home > div:first-child { background:linear-gradient(90deg,rgba(5,25,50,.88) 0%,rgba(5,25,50,.72) 58%,rgba(5,25,50,.34) 100%) !important; }
+    #home > div:nth-child(2) { padding:42px 22px 44px !important; }
+    #home > div:nth-child(2) > div { max-width:560px !important; }
+    #home h1 { font-size:clamp(36px,7vw,48px) !important; }
+    #home h1 + div { font-size:19px !important; }
+    #home p { font-size:15px !important; max-width:440px !important; }
+    #home p + div > div:first-child { font-size:35px !important; }
+    #home p + div > div:nth-child(2) { width:245px !important; }
+    #home p + div > div:last-child { font-size:42px !important; padding-left:26px !important; }
+    #home p + div + div { gap:10px !important; }
+    #home p + div + div > a { min-height:58px; }
+    #home p + div + div + div { gap:18px !important; }
+
+    #services { grid-template-columns:repeat(2,minmax(0,1fr)) !important; padding:18px 18px 8px !important; gap:14px !important; }
+    #financing > div { grid-template-columns:repeat(2,minmax(0,1fr)) !important; padding:26px 20px !important; gap:24px !important; }
+
+    section[aria-label="No credit check lease purchase option"] { padding:0 18px !important; }
+    section[aria-label="No credit check lease purchase option"] > div > div:nth-child(3) { grid-template-columns:160px minmax(0,1fr) !important; padding:28px 24px !important; gap:22px !important; }
+
+    #about { grid-template-columns:1fr 1fr !important; padding:34px 20px !important; gap:20px !important; }
+    #about > div:last-child { grid-column:1 / -1; max-width:520px; width:100%; justify-self:center; }
+
+    #areas > div { gap:20px !important; padding:20px !important; }
+    #areas > div > div:last-child { justify-content:center; flex-wrap:wrap; gap:10px 14px !important; }
+
+    #reviews > div { grid-template-columns:1fr !important; padding:28px 20px !important; gap:24px !important; }
+    #reviews > div > div:first-child { zoom:1 !important; }
+
+    footer { grid-template-columns:1fr !important; justify-items:center; padding:24px 20px 30px !important; gap:18px !important; }
+    footer > div:last-child { justify-content:center; flex-wrap:wrap; }
+  }
+
+  @media (max-width: 600px) {
+    header { position:relative; padding:8px 14px 10px !important; }
+    header > div:first-child > div { width:118px !important; height:62px !important; }
+    header > div:last-child > a { border-radius:7px !important; }
+    header > div:last-child > a span:first-child { width:30px !important; height:30px !important; }
+    header > div:last-child > a span:last-child { font-size:14px !important; }
+    header > nav { gap:16px !important; padding-top:5px !important; }
+
+    #home { background-position:66% center !important; }
+    #home > div:first-child { background:linear-gradient(90deg,rgba(5,25,50,.94) 0%,rgba(5,25,50,.80) 70%,rgba(5,25,50,.52) 100%) !important; }
+    #home > div:nth-child(2) { padding:34px 18px 34px !important; }
+    #home h1 { font-size:36px !important; line-height:1.02 !important; }
+    #home h1 + div { margin-top:12px !important; font-size:17px !important; }
+    #home p { margin-top:16px !important; font-size:14.5px !important; line-height:1.55 !important; }
+    #home p + div { margin-top:18px !important; }
+    #home p + div > div:first-child { font-size:31px !important; }
+    #home p + div > div:nth-child(2) { width:215px !important; height:5px !important; }
+    #home p + div > div:last-child { font-size:38px !important; padding-left:18px !important; }
+    #home p + div + div { margin-top:20px !important; display:grid !important; grid-template-columns:1fr !important; }
+    #home p + div + div > a { width:100% !important; justify-content:center !important; padding:13px 18px !important; }
+    #home p + div + div + div { margin-top:24px !important; display:grid !important; grid-template-columns:1fr 1fr !important; gap:14px 10px !important; }
+    #home p + div + div + div > div:last-child { grid-column:1 / -1; }
+
+    #services { grid-template-columns:1fr !important; padding:14px !important; gap:12px !important; }
+    #services a { min-height:220px !important; }
+    #services a > span:nth-child(3) { min-height:220px !important; }
+
+    #financing { margin-top:14px !important; }
+    #financing > div { grid-template-columns:1fr !important; padding:24px 18px !important; gap:18px !important; }
+    #financing > div > div { min-height:0 !important; }
+
+    section[aria-label="No credit check lease purchase option"] { margin-top:14px !important; padding:0 14px !important; }
+    section[aria-label="No credit check lease purchase option"] > div > div:nth-child(3) { grid-template-columns:1fr !important; padding:24px 18px 92px !important; gap:12px !important; text-align:center; }
+    section[aria-label="No credit check lease purchase option"] > div > div:nth-child(3) > div:first-child > div { max-width:150px !important; }
+    section[aria-label="No credit check lease purchase option"] > div > div:nth-child(3) > div:last-child > div { justify-content:center !important; }
+    section[aria-label="No credit check lease purchase option"] h2 { font-size:32px !important; }
+    section[aria-label="No credit check lease purchase option"] p { font-size:15px !important; }
+    section[aria-label="No credit check lease purchase option"] a { width:100% !important; min-width:0 !important; }
+    section[aria-label="No credit check lease purchase option"] > div > div:last-child { right:50% !important; transform:translateX(50%); bottom:10px !important; width:125px !important; height:58px !important; }
+
+    #about { grid-template-columns:1fr !important; padding:30px 18px !important; gap:18px !important; }
+    #about h2 { font-size:30px !important; }
+    #about > div:last-child { grid-column:auto; }
+
+    #about + section > div:last-child { grid-template-columns:1fr !important; padding:30px 18px !important; gap:22px !important; }
+    #about + section h2 { font-size:30px !important; }
+    #about + section p br { display:none; }
+    #about + section > div:last-child > div:last-child { min-width:0 !important; width:100%; }
+    #about + section a { justify-content:center; width:100%; }
+
+    #areas > div { flex-direction:column !important; align-items:flex-start !important; padding:18px !important; }
+    #areas > div > div:last-child { justify-content:flex-start !important; font-size:14px !important; }
+    #areas > div > div:last-child span:nth-child(even) { display:none; }
+
+    #reviews > div { padding:26px 16px !important; }
+    #reviews > div > div:first-child { grid-template-columns:1fr !important; gap:18px !important; }
+    #reviews h2 { font-size:28px !important; }
+    #reviews > div > div:first-child > div:nth-child(2) { padding:20px !important; }
+    #reviews video { width:100% !important; }
+
+    footer { padding:20px 16px 28px !important; }
+    footer > div:first-child { width:190px !important; height:100px !important; }
+    footer > div:last-child { flex-direction:column !important; }
+  }
+
+  @media (max-width: 380px) {
+    header > div:first-child > div { width:102px !important; }
+    header > div:last-child > a { padding-right:8px !important; }
+    header > div:last-child > a span:last-child { font-size:12.5px !important; }
+    #home h1 { font-size:32px !important; }
+    #home p + div > div:first-child { font-size:28px !important; }
+    #home p + div > div:last-child { font-size:34px !important; }
+  }
+
 </style>
 </helmet>
 <div style="width:100%; background:#ffffff;">
