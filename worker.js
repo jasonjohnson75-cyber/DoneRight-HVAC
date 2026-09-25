@@ -1,13 +1,15 @@
+function cors(response) { const h=new Headers(response.headers); h.set("Access-Control-Allow-Origin","https://doneright.cc"); h.set("Vary","Origin"); return new Response(response.body,{status:response.status,statusText:response.statusText,headers:h}); }
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
     if (url.pathname === "/api/contact") {
       if (request.method === "OPTIONS") {
-        return new Response(null, { headers: { "Allow": "POST, OPTIONS" } });
+        return new Response(null, { headers: { "Allow": "POST, OPTIONS", "Access-Control-Allow-Origin": "https://doneright.cc", "Access-Control-Allow-Methods": "POST, OPTIONS", "Access-Control-Allow-Headers": "Content-Type" } });
       }
       if (request.method !== "POST") {
-        return Response.json({ error: "Method not allowed." }, { status: 405 });
+        return cors(Response.json({ error: "Method not allowed." }, { status: 405 }));
       }
 
       try {
@@ -19,13 +21,13 @@ export default {
         const comments = String(data.Comments || "").trim();
 
         if (!name || !phone || !email || !subject || !comments) {
-          return Response.json({ error: "Please complete all fields." }, { status: 400 });
+          return cors(Response.json({ error: "Please complete all fields." }, { status: 400 }));
         }
         if (!/^\\S+@\\S+\\.\\S+$/.test(email)) {
-          return Response.json({ error: "Please enter a valid email address." }, { status: 400 });
+          return cors(Response.json({ error: "Please enter a valid email address." }, { status: 400 }));
         }
         if (!env.RESEND_API_KEY) {
-          return Response.json({ error: "Email service is not configured." }, { status: 503 });
+          return cors(Response.json({ error: "Email service is not configured." }, { status: 503 }));
         }
 
         const safe = (v) => v.replace(/[&<>"']/g, (c) => ({
@@ -57,12 +59,12 @@ export default {
         if (!send.ok) {
           const detail = await send.text();
           console.error("Resend error", send.status, detail);
-          return Response.json({ error: "Email delivery failed." }, { status: 502 });
+          return cors(Response.json({ error: "Email delivery failed." }, { status: 502 }));
         }
-        return Response.json({ ok: true });
+        return cors(Response.json({ ok: true }));
       } catch (err) {
         console.error("Contact error", err);
-        return Response.json({ error: "Unable to process request." }, { status: 500 });
+        return cors(Response.json({ error: "Unable to process request." }, { status: 500 }));
       }
     }
 
