@@ -132,7 +132,7 @@
     #reviews > div > div:first-child > div:nth-child(2) { padding:20px !important; }
     #reviews video { width:100% !important; }
 
-    footer { padding:20px 16px 28px !important; }
+    #contact-form > div { padding:32px 16px !important; }\n    #contact-form h2 { font-size:30px !important; }\n    #contact-form form { padding:20px !important; }\n    #contact-form .contact-grid { grid-template-columns:1fr !important; gap:16px !important; }\n\n    footer { padding:20px 16px 28px !important; }
     footer > div:first-child { width:190px !important; height:100px !important; }
     footer > div:last-child { flex-direction:column !important; }
   }
@@ -425,6 +425,36 @@
   </video>
 </div>
    </div>
+  </section>
+
+  <section id="contact-form" style="background:#eff6fd; border-top:1px solid #dbe8f5;">
+    <div style="max-width:900px; margin:0 auto; padding:46px 28px;">
+      <div style="text-align:center; max-width:650px; margin:0 auto 26px;">
+        <div style="font-size:13px; font-weight:800; letter-spacing:0.12em; color:#1276d6;">GET IN TOUCH</div>
+        <h2 style="margin:8px 0 0; font-size:36px; line-height:1.1; font-weight:900; color:#0d3f86;">CONTACT DONE RIGHT</h2>
+        <p style="margin:12px 0 0; font-size:15px; line-height:1.6; color:#39536f;">Tell us how we can help. Complete the form below and your message will be addressed to service@doneright.cc.</p>
+      </div>
+      <form action="mailto:service@doneright.cc" method="post" enctype="text/plain" style="background:#ffffff; border:1px solid #dbe8f5; border-radius:12px; padding:28px; box-shadow:0 8px 24px rgba(13,63,134,0.08);">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;" class="contact-grid">
+          <label style="display:block; font-size:14px; font-weight:700; color:#0f2b4c;">Name
+            <input required name="Name" type="text" autocomplete="name" style="display:block; width:100%; margin-top:7px; min-height:48px; border:1px solid #b8cbe0; border-radius:7px; padding:11px 13px; font:inherit; font-size:16px; color:#14263c; background:#ffffff;" />
+          </label>
+          <label style="display:block; font-size:14px; font-weight:700; color:#0f2b4c;">Phone Number
+            <input required name="Phone" type="tel" autocomplete="tel" style="display:block; width:100%; margin-top:7px; min-height:48px; border:1px solid #b8cbe0; border-radius:7px; padding:11px 13px; font:inherit; font-size:16px; color:#14263c; background:#ffffff;" />
+          </label>
+          <label style="display:block; font-size:14px; font-weight:700; color:#0f2b4c;">Email
+            <input required name="Email" type="email" autocomplete="email" style="display:block; width:100%; margin-top:7px; min-height:48px; border:1px solid #b8cbe0; border-radius:7px; padding:11px 13px; font:inherit; font-size:16px; color:#14263c; background:#ffffff;" />
+          </label>
+          <label style="display:block; font-size:14px; font-weight:700; color:#0f2b4c;">Subject
+            <input required name="Subject" type="text" style="display:block; width:100%; margin-top:7px; min-height:48px; border:1px solid #b8cbe0; border-radius:7px; padding:11px 13px; font:inherit; font-size:16px; color:#14263c; background:#ffffff;" />
+          </label>
+        </div>
+        <label style="display:block; margin-top:18px; font-size:14px; font-weight:700; color:#0f2b4c;">Comments
+          <textarea required name="Comments" rows="6" style="display:block; width:100%; margin-top:7px; border:1px solid #b8cbe0; border-radius:7px; padding:12px 13px; font:inherit; font-size:16px; line-height:1.5; color:#14263c; background:#ffffff; resize:vertical;"></textarea>
+        </label>
+        <button type="submit" style="margin-top:20px; width:100%; min-height:52px; border:0; border-radius:8px; background:#f26522; color:#ffffff; font:inherit; font-size:17px; font-weight:800; cursor:pointer;">Send Message</button>
+      </form>
+    </div>
   </section>
 
   <footer id="contact" style="max-width:1240px; margin:0 auto; padding:26px 28px 34px; display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:26px; align-items:center; overflow:hidden;">
