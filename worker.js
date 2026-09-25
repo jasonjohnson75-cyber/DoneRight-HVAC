@@ -13,7 +13,14 @@ export default {
       }
 
       try {
-        const data = await request.json();
+        const contentType = request.headers.get("content-type") || "";
+        let data;
+        if (contentType.includes("application/json")) {
+          data = await request.json();
+        } else {
+          const submitted = await request.formData();
+          data = Object.fromEntries(submitted.entries());
+        }
         const name = String(data.Name || "").trim();
         const phone = String(data.Phone || "").trim();
         const email = String(data.Email || "").trim();
@@ -61,7 +68,8 @@ export default {
           console.error("Resend error", send.status, detail);
           return cors(Response.json({ error: "Email delivery failed." }, { status: 502 }));
         }
-        return cors(Response.json({ ok: true }));
+        if (contentType.includes("application/json")) return cors(Response.json({ ok: true }));
+        return Response.redirect("https://doneright.cc/?contact=sent#contact-form", 303);
       } catch (err) {
         console.error("Contact error", err);
         return cors(Response.json({ error: "Unable to process request." }, { status: 500 }));
