@@ -452,7 +452,7 @@
         <label style="display:block; margin-top:18px; font-size:14px; font-weight:700; color:#0f2b4c;">Comments
           <textarea required name="Comments" rows="6" style="display:block; width:100%; margin-top:7px; border:1px solid #b8cbe0; border-radius:7px; padding:12px 13px; font:inherit; font-size:16px; line-height:1.5; color:#14263c; background:#ffffff; resize:vertical;"></textarea>
         </label>
-        <button id="contact-submit" type="submit" style="margin-top:20px; width:100%; min-height:52px; border:0; border-radius:8px; background:#f26522; color:#ffffff; font:inherit; font-size:17px; font-weight:800; cursor:pointer;">Send Message</button>
+        <button id="contact-submit" type="button" onclick="sendDoneRightContact()" style="margin-top:20px; width:100%; min-height:52px; border:0; border-radius:8px; background:#f26522; color:#ffffff; font:inherit; font-size:17px; font-weight:800; cursor:pointer;">Send Message</button>
         <div id="contact-status" role="status" aria-live="polite" style="display:none; margin-top:14px; padding:12px 14px; border-radius:7px; font-size:14px; font-weight:700; text-align:center;"></div>
       </form>
     </div>
@@ -566,29 +566,40 @@ class Component extends DCLogic {
 </script>
 
 <script>
-(function(){
+async function sendDoneRightContact(){
   const form=document.getElementById('done-right-contact-form');
-  if(!form) return;
   const button=document.getElementById('contact-submit');
   const status=document.getElementById('contact-status');
-  form.addEventListener('submit', async function(e){
-    e.preventDefault();
-    button.disabled=true; button.textContent='Sending...';
-    status.style.display='none';
-    const data=Object.fromEntries(new FormData(form).entries());
-    try {
-      const res=await fetch('https://doneright-hvac.jasonjohnson75.workers.dev/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
-      const body=await res.json().catch(()=>({}));
-      if(!res.ok) throw new Error(body.error||'Unable to send message.');
-      form.reset();
-      status.textContent='Thank you. Your message has been sent to Done Right.';
-      status.style.background='#e9f7ef'; status.style.color='#176b3a'; status.style.display='block';
-    } catch(err) {
-      status.textContent='We could not send your message. Please call (601) 895-0222 or try again.';
-      status.style.background='#fff0eb'; status.style.color='#9b3516'; status.style.display='block';
-    } finally { button.disabled=false; button.textContent='Send Message'; }
-  });
-})();
+  if(!form || !button || !status) return;
+  if(!form.reportValidity()) return;
+  button.disabled=true;
+  button.textContent='Sending...';
+  status.style.display='none';
+  const data={};
+  new FormData(form).forEach((value,key)=>data[key]=value);
+  try{
+    const res=await fetch('https://doneright-hvac.jasonjohnson75.workers.dev/api/contact',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(data)
+    });
+    const body=await res.json().catch(()=>({}));
+    if(!res.ok) throw new Error(body.error||'Unable to send message.');
+    form.reset();
+    status.textContent='Thank you. Your message has been sent to Done Right.';
+    status.style.background='#e9f7ef';
+    status.style.color='#176b3a';
+    status.style.display='block';
+  }catch(err){
+    status.textContent='We could not send your message. Please call (601) 895-0222 or try again.';
+    status.style.background='#fff0eb';
+    status.style.color='#9b3516';
+    status.style.display='block';
+  }finally{
+    button.disabled=false;
+    button.textContent='Send Message';
+  }
+}
 </script>
 </body>
 </html>
