@@ -30,7 +30,7 @@ export default {
         if (!name || !phone || !email || !subject || !comments) {
           return cors(Response.json({ error: "Please complete all fields." }, { status: 400 }));
         }
-        if (!/^\\S+@\\S+\\.\\S+$/.test(email)) {
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
           return cors(Response.json({ error: "Please enter a valid email address." }, { status: 400 }));
         }
         if (!env.RESEND_API_KEY) {
