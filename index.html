@@ -434,7 +434,7 @@
         <h2 style="margin:8px 0 0; font-size:36px; line-height:1.1; font-weight:900; color:#0d3f86;">CONTACT DONE RIGHT</h2>
         <p style="margin:12px 0 0; font-size:15px; line-height:1.6; color:#39536f;">Tell us how we can help. Complete the form below and your message will be addressed to servicedonerightllc@gmail.com.</p>
       </div>
-      <form id="done-right-contact-form" action="/api/contact" method="post" style="background:#ffffff; border:1px solid #dbe8f5; border-radius:12px; padding:28px; box-shadow:0 8px 24px rgba(13,63,134,0.08);">
+      <form id="done-right-contact-form" action="javascript:void(0)" method="post" style="background:#ffffff; border:1px solid #dbe8f5; border-radius:12px; padding:28px; box-shadow:0 8px 24px rgba(13,63,134,0.08);">
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px;" class="contact-grid">
           <label style="display:block; font-size:14px; font-weight:700; color:#0f2b4c;">Name
             <input required name="Name" type="text" autocomplete="name" style="display:block; width:100%; margin-top:7px; min-height:48px; border:1px solid #b8cbe0; border-radius:7px; padding:11px 13px; font:inherit; font-size:16px; color:#14263c; background:#ffffff;" />
@@ -576,7 +576,7 @@ class Component extends DCLogic {
     status.style.display='none';
     const data=Object.fromEntries(new FormData(form).entries());
     try {
-      const res=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+      const res=await fetch('https://doneright-hvac.jasonjohnson75.workers.dev/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
       const body=await res.json().catch(()=>({}));
       if(!res.ok) throw new Error(body.error||'Unable to send message.');
       form.reset();
